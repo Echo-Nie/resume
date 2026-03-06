@@ -1,0 +1,107 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{soul}
+\usepackage{cite}
+\usepackage{hyperref} % for \href command
+\hypersetup{
+    colorlinks=false,   % 不使用颜色区分链接
+    pdfborder={0 0 0},  % 去掉链接边框（三个参数分别对应左、右、下边框宽度）
+}
+\usepackage{fontawesome5} %add logo
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{聂小明}
+
+\begin{center}
+\faPhoneSquare \ (+86)138-0000-0000 \quad 
+\href{mailto:example@domain.com}{\faEnvelopeO \ example@domain.com} \quad 
+\href{https://github.com/USERNAME}{\faGithub @USERNAME}
+\end{center}
+
+% \section{\faGraduationCap\ 教育背景}
+\section{\faGraduationCap \kaishu 教育背景}
+% \begin{onehalfspacing}
+\datedsubsection{\textbf{清华大学}，计算机科学与技术, \textit{在读硕士研究生}}{2025.9 - 2028.7}
+\datedsubsection{\textbf{浙江大学}, 软件工程, \textit{工学学士}}{2021.9 - 2025.7}
+\begin{itemize}
+    \item \textbf{学业荣誉:} 专业排名1/100, GPA 3.9/4.0, \textbf{国家奖学金}, \textbf{优秀毕业生}, 一等奖奖学金
+    \item \textbf{语言能力:} 英语 (CET-6), 日语 (JLPT N2)
+\end{itemize}
+
+% \end{onehalfspacing}
+
+\section{\faBriefcase \kaishu 实习经历}
+\datedsubsection{\textbf{字节跳动 | ByteDance} \kaishu 核心基础研究部}{2025.07--2025.12}
+% \begin{onehalfspacing}
+% === 项目 1：推荐系统性能优化 ===
+\subsection{推荐排序系统在线性能提升}
+\begin{itemize}
+  \item \textbf{背景及问题}: 核心推荐排序链路在高并发场景下出现显著尾延迟，导致整体用户点击率下降。
+  \item \textbf{工作与成果}: 设计并落地分布式缓存一致性方案，结合动态负载感知调度与线上灰度验证，将 99.9% 延迟缩短 40%，同时提升推荐召回准确率约 2%。
+\end{itemize}
+% === 项目 2：大规模日志平台架构升级 ===
+\subsection{大规模日志平台架构升级}
+\begin{itemize}
+  \item \textbf{背景与问题}：原有日志采集系统在 PB 级数据下存在写入瓶颈，处理延迟高，导致线上监控数据滞后。
+  \item \textbf{工作与成果}：参与设计基于 Flink 的流式数据处理框架，优化序列化与存储策略；实现端到端延迟降低 60%，支持 10+ 亿事件/天的稳定处理。
+\end{itemize}
+% \end{onehalfspacing}
+
+\datedsubsection{\textbf{阿里巴巴 | Alibaba} \kaishu 机器智能与算法平台部}{2024.03--2024.07}
+% \begin{onehalfspacing}
+% === 项目 1：搜索排序模型加速 ===
+\subsection{搜索排序模型在线加速与量化部署}
+\begin{itemize}
+  \item \textbf{背景及问题}: 搜索排序模型多层 Transformer 导致在线推理延迟高，影响搜索体验。
+  \item \textbf{工作与成果}: 基于 ONNX Runtime 实现模型量化与分层缓存，开发端到端推理优化框架，使单请求延迟降低 35%，部署成本下降 25%。
+\end{itemize}
+% === 项目 2：智能推荐召回质量提升 ===
+\subsection{智能推荐召回质量提升}
+\begin{itemize}
+  \item \textbf{背景及问题}：召回阶段多模态特征融合存在特征失衡，导致冷启动内容曝光不足。
+  \item \textbf{工作与成果}：搭建多模态特征增强流水线，设计在线学习模块，实现召回覆盖率提升 18%，冷启动命中率提高 22%。
+\end{itemize}
+% \end{onehalfspacing}
+
+\section{\faGithub \kaishu 开源经历}
+% \begin{onehalfspacing}
+\begin{itemize}
+  \item 参与腾讯“犀牛鸟计划”开源项目孵化，主导多模态检索引擎模块设计与性能优化。
+  \item 在“开放原子开源大赛”中提交并维护基于 Kubernetes 的边缘计算调度组件，入围决赛。
+  \item 参与“开源之夏”社区活动，协作改进某主流深度学习框架的 C++ 算子性能，贡献 PR 若干。
+\end{itemize}
+% \end{onehalfspacing}
+
+\section{\faMedal \kaishu 竞赛获奖}
+% increase linespacing [parsep=0.5ex]
+\datedsubsection{\textbf{全国大学生人工智能创新大赛,} 一等奖}{2026.02}
+\datedsubsection{\textbf{某厂算法挑战赛,} 冠军}{2025.12}
+\datedsubsection{\textbf{全国大学生创新大赛,} 一等奖}{2025.11}
+\datedsubsection{\textbf{Kaggle竞赛,} 金牌}{2025.11}
+
+
+\section{\faFilesO \kaishu 科研经历}
+\begin{enumerate}[label={[\arabic*]}, leftmargin=*, itemsep=0pt, parsep=0pt]
+  \item
+  \textbf{Nie Xiaoming}, Xiaowen Liu, Jingfei Song, Rui Wang, and Hao Li*.
+  \href{https://example.com}{\ul{Your Paper Name1}}.
+  In \textit{International Conference on Systems and Machine Learning (SysML)}, 2025.
+
+  \item
+  Junjie Sun, Lin Mei*, \textbf{Nie Xiaoming}, Yifan Zhou, Qian Liu, Ming Xu
+  \href{https://example.com}{\ul{Your Paper Name2}}.
+  In \textit{Conference on Computer Vision and Pattern Recognition (CVPR)}, 2025.
+\end{enumerate}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
