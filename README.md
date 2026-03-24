@@ -1,3 +1,5 @@
+支持中文、一键编译的计算机专业 LaTeX 简历模板 | Computer Science LaTeX Resume
+
 ## 🚀 快速开始
 
 **1) 在线编译（推荐）**
